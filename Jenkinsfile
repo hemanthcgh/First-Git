@@ -1,9 +1,10 @@
-node('tomcat') {
-    stage('checkout') {
-        sh 'pwd'
-        sh 'echo "hello"'
-        sh 'echo "hello1"'
-        sh 'echo "hello2"'
-        sh 'echo "hello3"'
-    }
+pipeline {
+    agent any 
+        stages {
+            stage('checkout') {
+                steps {
+                    sh 'echo "checkout stage"' 
+                }
+            }
+        }
 }
